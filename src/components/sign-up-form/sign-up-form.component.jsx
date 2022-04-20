@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 import { 
     createAuthUserWithEmailAndPassword, 
@@ -94,7 +94,7 @@ const SignUpForm = () => {
                     name='confirmPassword' 
                     value={confirmPassword} 
                 />                
-                <Button buttonType='default' type='submit'>Sign up</Button>
+                <Button type='submit' buttonType={BUTTON_TYPE_CLASSES.base}>Sign up</Button>
             </form>
         </div>
     );
